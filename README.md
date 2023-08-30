@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Built in under 60 minutes with the Cursor IDE to test its AI features. 90% of the code is AI-generated. Lets you compare electricity prices in NZ.
 
 ## Getting Started
 
