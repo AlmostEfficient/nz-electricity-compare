@@ -112,3 +112,293 @@ img {
   padding: 20px;
   cursor: pointer;
 }
+
+/* Custom Plans Section */
+.custom-plans-section {
+  width: 100%;
+  margin: 30px 0;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+.custom-plans-section h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.add-plan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.add-plan input[type="text"] {
+  width: 120px;
+}
+
+.add-plan input[type="number"] {
+  width: 100px;
+}
+
+.add-plan button {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.add-plan button:hover {
+  background-color: #45a049;
+}
+
+.custom-plans-list {
+  margin-top: 20px;
+}
+
+.custom-plans-list h4 {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.custom-plan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-plan-item span:first-child {
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  text-align: left;
+}
+
+.plan-cost {
+  color: #666;
+  font-size: 0.9em;
+  margin: 0 15px;
+}
+
+.remove-btn {
+  background-color: #ff4444;
+  color: white;
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Comparison Table Section */
+.comparison-section {
+  width: 100%;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-section h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.comparison-table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1.5fr;
+  gap: 1px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.table-header {
+  display: contents;
+}
+
+.table-header > div {
+  background-color: #ff4500;
+  color: white;
+  padding: 15px 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 13px;
+}
+
+.table-row {
+  display: contents;
+}
+
+.table-row > div {
+  background-color: #fff;
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row.cheapest > div {
+  background-color: #e8f5e8;
+  border: 2px solid #4CAF50;
+}
+
+.table-row.current-provider > div {
+  background-color: #fff3e0;
+  border: 2px solid #ff9800;
+}
+
+.table-row.cheapest.current-provider > div {
+  background-color: #e1f5fe;
+  border: 2px solid #2196F3;
+}
+
+.plan-name {
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.provider {
+  font-size: 11px;
+  color: #666;
+  font-weight: normal;
+}
+
+.current-cost {
+  position: relative;
+}
+
+.badge {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.current-usage {
+  background-color: #ff6600 !important;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 900px) {
+  .comparison-table {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    font-size: 12px;
+  }
+  
+  .table-header > div:nth-child(4),
+  .table-header > div:nth-child(5),
+  .table-row > div:nth-child(4),
+  .table-row > div:nth-child(5) {
+    display: none;
+  }
+  
+  .table-header > div:nth-child(6) {
+    grid-column: 4;
+  }
+  
+  .table-row > div:nth-child(6) {
+    grid-column: 4;
+  }
+  
+  .table-header > div:nth-child(7) {
+    grid-column: 4;
+  }
+  
+  .table-row > div:nth-child(7) {
+    grid-column: 4;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .comparison-table {
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    font-size: 11px;
+  }
+  
+  .table-header > div:nth-child(2),
+  .table-header > div:nth-child(3),
+  .table-row > div:nth-child(2),
+  .table-row > div:nth-child(3) {
+    display: none;
+  }
+  
+  .table-header > div:nth-child(6) {
+    grid-column: 2;
+  }
+  
+  .table-row > div:nth-child(6) {
+    grid-column: 2;
+  }
+  
+  .table-header > div:nth-child(7) {
+    grid-column: 3;
+  }
+  
+  .table-row > div:nth-child(7) {
+    grid-column: 3;
+  }
+  
+  .comparison-section {
+    padding: 15px;
+  }
+  
+  .table-header > div,
+  .table-row > div {
+    padding: 10px 8px;
+  }
+
+  .add-plan {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .add-plan input {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .custom-plan-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .plan-cost {
+    margin: 0;
+  }
+  
+  .remove-btn {
+    align-self: flex-end;
+  }
+}
